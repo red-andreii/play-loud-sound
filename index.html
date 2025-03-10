@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Loud Sound</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        #playButton {
+            padding: 30px 50px;
+            font-size: 24px;
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        #playButton:hover {
+            background-color: #ff381a;
+        }
+
+        @media (max-width: 600px) {
+            #playButton {
+                padding: 20px 30px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="playButton">Play Loud Sound</button>
+    <!-- Update the src with your own MP3 file -->
+    <audio id="sound" src="https://github.com/your-username/play-loud-sound/raw/main/loud-sound.mp3" preload="auto"></audio>
+
+    <script>
+        document.getElementById('playButton').addEventListener('click', function() {
+            var sound = document.getElementById('sound');
+            sound.play();
+        });
+    </script>
+</body>
+</html>
